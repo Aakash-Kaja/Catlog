@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-bold text-business-blue">
-              Sri Rama
+            SRI RAMA ENTERPRISES
             </Link>
           </div>
 

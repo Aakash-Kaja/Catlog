@@ -18,7 +18,7 @@ const Home = () => {
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="block text-business-orange mb-2">Sri Rama Enterprises</span>
+            <span className="block text-business-orange mb-2">SRI RAMA ENTERPRISES</span>
             <span className="text-3xl md:text-4xl font-semibold">Shop No 1, NSC BOSE ROAD, TANUKU</span>
           </h1>
           
@@ -41,7 +41,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-business-blue mb-4">
-              Why Choose Sri Rama Enterprises?
+              Why Choose SRI RAMA ENTERPRISES?
             </h2>
             <p className="text-lg text-business-gray max-w-2xl mx-auto">
               We are your neighbors, committed to bringing you the best products with the personal service you deserve.
