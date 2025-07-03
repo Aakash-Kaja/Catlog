@@ -58,7 +58,7 @@ const Home = () => {
                   Trusted Partnership
                 </h3>
                 <p className="text-business-gray">
-                  25+ years of reliable service to our community. We stand behind 
+                  20+ years of reliable service to our community. We stand behind 
                   every product and every promise we make.
                 </p>
               </CardContent>
@@ -101,7 +101,7 @@ const Home = () => {
       <section className="py-20 bg-gradient-hero">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Visit Sri Rama Enterprises Today!
+            Visit SRI RAMA ENTERPRISES Today!
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Explore our range of products or contact us directly for your needs.
