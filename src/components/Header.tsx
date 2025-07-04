@@ -29,14 +29,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-wrap justify-between items-center h-16 w-full min-w-0">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold text-business-blue">
+          <div className="flex-shrink-0 min-w-0">
+            <Link to="/" className="text-lg sm:text-xl font-bold text-business-blue truncate">
               {t('brand')}
             </Link>
           </div>
 
-          {/* Language Selector */}
-          <div className="ml-4">
+          {/* Language Selector (hidden on mobile, visible on md+) */}
+          <div className="ml-2 hidden md:block">
             <select
               value={language}
               onChange={handleLanguageChange}
@@ -96,6 +96,18 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              {/* Language Selector in mobile menu */}
+              <div className="mt-2">
+                <select
+                  value={language}
+                  onChange={handleLanguageChange}
+                  className="border rounded px-2 py-1 text-xs w-full"
+                  aria-label="Select language"
+                >
+                  <option value="en">English</option>
+                  <option value="te">తెలుగు</option>
+                </select>
+              </div>
             </div>
           </div>
         )}
