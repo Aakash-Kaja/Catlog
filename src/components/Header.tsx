@@ -6,23 +6,22 @@ import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState(
-    localStorage.getItem("language") || "en"
-  );
+  const [language, setLanguage] = useState(localStorage.getItem("language") || "en");
   const location = useLocation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Catalog", href: "/catalog" },
+    { name: t('nav.home'), href: "/" },
+    { name: t('nav.catalog'), href: "/catalog" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setLanguage(e.target.value);
-    localStorage.setItem("language", e.target.value);
-    window.location.reload(); // For now, reload to propagate language change
+    const newLang = e.target.value;
+    setLanguage(newLang);
+    localStorage.setItem("language", newLang);
+    i18n.changeLanguage(newLang);
   };
 
   return (

@@ -120,6 +120,10 @@ const resources = {
         message: 'Oops! Page not found',
         returnHome: 'Return to Home',
       },
+      nav: {
+        home: 'Home',
+        catalog: 'Catalog',
+      },
     },
   },
   te: {
@@ -239,6 +243,10 @@ const resources = {
         title: '404',
         message: 'అయ్యో! పేజీ కనబడలేదు',
         returnHome: 'హోమ్‌కు తిరిగి వెళ్లండి',
+      },
+      nav: {
+        home: 'హోమ్',
+        catalog: 'క్యాటలాగ్',
       },
     },
   },
