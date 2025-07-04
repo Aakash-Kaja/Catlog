@@ -22,6 +22,7 @@ const Header = () => {
     setLanguage(newLang);
     localStorage.setItem("language", newLang);
     i18n.changeLanguage(newLang);
+    setIsMenuOpen(false);
   };
 
   return (
