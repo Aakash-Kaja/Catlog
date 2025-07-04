@@ -6,7 +6,14 @@ import heroImage from "@/assets/hero-business.jpg";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLang = e.target.value;
+    localStorage.setItem("language", newLang);
+    i18n.changeLanguage(newLang);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
