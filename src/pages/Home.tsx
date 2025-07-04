@@ -26,9 +26,9 @@ const Home = () => {
         </div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="block text-business-orange mb-2">{t('home.heroTitle')}</span>
-            <span className="text-3xl md:text-4xl font-semibold">{t('home.heroSubtitle')}</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight break-words">
+            <span className="block text-business-orange mb-2 break-words">{t('home.heroTitle')}</span>
+            <span className="text-xl sm:text-2xl md:text-3xl font-semibold break-words">{t('home.heroSubtitle')}</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">
@@ -49,24 +49,24 @@ const Home = () => {
       <section className="py-20 bg-business-gray-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-business-blue mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-business-blue mb-4 break-words">
               {t('home.aboutTitle')}
             </h2>
-            <p className="text-lg text-business-gray max-w-2xl mx-auto">
+            <p className="text-lg text-business-gray max-w-2xl mx-auto break-words">
               {t('home.aboutDesc')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-card shadow-card hover:shadow-professional transition-smooth">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-business-blue mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-business-blue mb-4 break-words">
                   {t('home.trusted')}
                 </h3>
-                <p className="text-business-gray">
+                <p className="text-business-gray break-words">
                   {t('home.trustedDesc')}
                 </p>
               </CardContent>

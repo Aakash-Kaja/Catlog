@@ -40,7 +40,7 @@ const Header = () => {
             <select
               value={language}
               onChange={handleLanguageChange}
-              className="border rounded px-2 py-1 text-sm"
+              className="border rounded px-2 py-1 text-xs md:text-xs lg:text-xs"
               aria-label="Select language"
             >
               <option value="en">English</option>
@@ -49,12 +49,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 ml-auto">
+          <nav className="hidden md:flex space-x-4 ml-auto">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-smooth ${
+                className={`px-2 py-2 rounded-md text-xs font-medium transition-smooth ${
                   isActive(item.href)
                     ? "text-primary bg-business-gray-light"
                     : "text-business-gray hover:text-primary hover:bg-business-gray-light"

@@ -199,15 +199,15 @@ const Catalog = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto">
                   {category.products.map((product, productIndex) => (
                     <div
                       key={productIndex}
-                      className="bg-background rounded-lg p-4 border border-border hover:shadow-card transition-smooth"
+                      className="bg-background rounded-lg p-2 sm:p-4 border border-border hover:shadow-card transition-smooth"
                     >
                       <div className="flex flex-col items-start mb-3">
                         <div className="w-full flex justify-between items-center mb-1">
-                          <h4 className="font-medium text-business-blue">
+                          <h4 className="font-medium text-business-blue break-words">
                             {t(`catalog.products.${product.key}.name`)}
                           </h4>
                           <span className="text-business-gray text-sm ml-4 whitespace-nowrap">{product.size}</span>
