@@ -128,7 +128,7 @@ const resources = {
   },
   te: {
     translation: {
-      brand: 'శ్రీ రామ ఎంటర్‌ప్రైజెస్',
+      brand: 'శ్రీరామ ఎంటర్ ప్రైజెస్',
       home: {
         heroTitle: 'శ్రీ రామ ఎంటర్‌ప్రైజెస్',
         heroSubtitle: 'షాప్ నెం 1, ఎన్‌ఎస్‌సి బోస్ రోడ్, తణుకు',
