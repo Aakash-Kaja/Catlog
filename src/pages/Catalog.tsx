@@ -188,13 +188,13 @@ const Catalog = () => {
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <CardTitle className="text-2xl text-business-blue mb-2">
+                    <CardTitle className="text-2xl text-business-blue mb-2 telugu-font">
                       {category.category}
                     </CardTitle>
-                    <Badge variant="secondary" className="mb-2">
+                    <Badge variant="secondary" className="mb-2 telugu-font">
                       {category.company}
                     </Badge>
-                    <p className="text-business-gray">{category.description}</p>
+                    <p className="text-business-gray telugu-font">{category.description}</p>
                   </div>
                 </div>
               </CardHeader>
@@ -207,7 +207,7 @@ const Catalog = () => {
                     >
                       <div className="flex flex-col items-start mb-3">
                         <div className="w-full flex justify-between items-center mb-1">
-                          <h4 className="font-medium text-business-blue break-words">
+                          <h4 className="font-medium text-business-blue break-words telugu-font">
                             {t(`catalog.products.${product.key}.name`)}
                           </h4>
                           <span className="text-business-gray text-sm ml-4 whitespace-nowrap">{product.size}</span>
