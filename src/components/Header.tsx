@@ -25,9 +25,9 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-background border-b border-border shadow-card sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="bg-background border-b border-border shadow-card sticky top-0 z-50 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-wrap justify-between items-center h-16 w-full min-w-0">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-bold text-business-blue">
