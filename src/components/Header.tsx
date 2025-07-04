@@ -2,10 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [language, setLanguage] = useState(
+    localStorage.getItem("language") || "en"
+  );
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -14,6 +19,12 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(e.target.value);
+    localStorage.setItem("language", e.target.value);
+    window.location.reload(); // For now, reload to propagate language change
+  };
+
   return (
     <header className="bg-background border-b border-border shadow-card sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,8 +32,21 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-bold text-business-blue">
-            SRI RAMA ENTERPRISES
+              {t('brand')}
             </Link>
+          </div>
+
+          {/* Language Selector */}
+          <div className="ml-4">
+            <select
+              value={language}
+              onChange={handleLanguageChange}
+              className="border rounded px-2 py-1 text-sm"
+              aria-label="Select language"
+            >
+              <option value="en">English</option>
+              <option value="te">తెలుగు</option>
+            </select>
           </div>
 
           {/* Desktop Navigation */}

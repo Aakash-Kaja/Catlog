@@ -3,165 +3,167 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Package, Download, ExternalLink, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Catalog = () => {
+  const { t } = useTranslation();
   const productCategories = [
     {
-      company: "Zydus Wellness Ltd",
-      category: "Health & Nutrition",
-      description: "Popular nutritional and wellness products for daily use",
+      company: t('catalog.companies.zydus'),
+      category: t('catalog.categories.health'),
+      description: t('catalog.products.complan.desc'),
       products: [
-        { name: "Complan", size: "500gm" },
-        { name: "Glucon-D", size: "Regular" },
-        { name: "Nycil Prickly Heat Powder", size: "150gm" },
-        { name: "Everyouth", size: "Face Pack" },
-        { name: "Sugarfree Tablets", size: "100pcs" },
-        { name: "Sugarfree Powder", size: "100gm" },
-        { name: "I Am Lite", size: "Low Calorie" },
+        { key: "complan", size: "500gm" },
+        { key: "gluconD", size: "Regular" },
+        { key: "nycil", size: "150gm" },
+        { key: "everyouth", size: "Face Pack" },
+        { key: "sugarfreeTablets", size: "100pcs" },
+        { key: "sugarfreePowder", size: "100gm" },
+        { key: "iamLite", size: "Low Calorie" },
       ],
       hasDownload: true,
     },
     {
-      company: "Winkies",
-      category: "Bakery Products",
-      description: "Delicious ready-to-eat cakes in a variety of price ranges",
+      company: t('catalog.companies.winkies'),
+      category: t('catalog.categories.bakery'),
+      description: t('catalog.products.winkies5.desc'),
       products: [
-        { name: "Winkies Cake - ₹5", size: "Small" },
-        { name: "Winkies Cake - ₹10", size: "Medium" },
-        { name: "Winkies Cake - ₹15", size: "Medium" },
-        { name: "Winkies Cake - ₹20", size: "Large" },
-        { name: "Winkies Cake - ₹30", size: "Large" },
-        { name: "Winkies Cake - ₹50", size: "Extra Large" },
-        { name: "Winkies Cake - ₹60", size: "Premium" },
-        { name: "Winkies Cake - ₹90", size: "Premium" },
+        { key: "winkies5", size: "Small" },
+        { key: "winkies10", size: "Medium" },
+        { key: "winkies15", size: "Medium" },
+        { key: "winkies20", size: "Large" },
+        { key: "winkies30", size: "Large" },
+        { key: "winkies50", size: "Extra Large" },
+        { key: "winkies60", size: "Premium" },
+        { key: "winkies90", size: "Premium" },
       ],
       hasDownload: true,
     },
     {
-      company: "Bioline",
-      category: "Medical & Hygiene",
-      description: "Essential medical and hygiene products for everyday needs",
+      company: t('catalog.companies.bioline'),
+      category: t('catalog.categories.medical'),
+      description: t('catalog.products.doctorPhenyle.desc'),
       products: [
-        { name: "Doctor Phenyle", size: "1lt" },
-        { name: "ArKof", size: "100ml" },
-        { name: "Crack Heel", size: "50gm" },
-        { name: "Fenacin", size: "100ml" },
-        { name: "Adult Diapers", size: "Pack" },
+        { key: "doctorPhenyle", size: "1lt" },
+        { key: "arkof", size: "100ml" },
+        { key: "crackHeel", size: "50gm" },
+        { key: "fenacin", size: "100ml" },
+        { key: "adultDiapers", size: "Pack" },
       ],
       hasDownload: true,
     },
     {
-      company: "Padmini",
-      category: "Fragrance & Spiritual",
-      description: "Aromatic products for daily prayer and meditation",
-      products: [{ name: "Padmini Agarbatti", size: "Box" }],
+      company: t('catalog.companies.padmini'),
+      category: t('catalog.categories.fragrance'),
+      description: t('catalog.products.padminiAgarbatti.desc'),
+      products: [{ key: "padminiAgarbatti", size: "Box" }],
       hasDownload: true,
     },
     {
-      company: "Gowdurbar",
-      category: "Spiritual & Wellness",
-      description: "Traditional and aromatic pooja and wellness items",
+      company: t('catalog.companies.gowdurbar'),
+      category: t('catalog.categories.spiritual'),
+      description: t('catalog.products.dhoopCones.desc'),
       products: [
-        { name: "Dhoop Cones", size: "Box" },
-        { name: "Dhoop Sticks", size: "Pack" },
-        { name: "Dhoop Cups", size: "Set" },
-        { name: "Pooja Oil", size: "500ml" },
-        { name: "Chaphor", size: "Bottle" },
-        { name: "Sree Chandah Powder", size: "50gm" },
-        { name: "Soaps", size: "Pack" },
+        { key: "dhoopCones", size: "Box" },
+        { key: "dhoopSticks", size: "Pack" },
+        { key: "dhoopCups", size: "Set" },
+        { key: "poojaOil", size: "500ml" },
+        { key: "chaphor", size: "Bottle" },
+        { key: "sreeChandahPowder", size: "50gm" },
+        { key: "soaps", size: "Pack" },
       ],
       hasDownload: true,
     },
     {
-      company: "Pigeon",
-      category: "Baby Care",
-      description: "Trusted products for gentle baby care and hygiene",
-      products: [{ name: "Pigeon Baby Care Products", size: "Assorted" }],
+      company: t('catalog.companies.pigeon'),
+      category: t('catalog.categories.babyCare'),
+      description: t('catalog.products.pigeonBaby.desc'),
+      products: [{ key: "pigeonBaby", size: "Assorted" }],
       hasDownload: true,
     },
     {
-      company: "Florite",
-      category: "Baby Care",
-      description: "Safe and nurturing care products for infants and toddlers",
-      products: [{ name: "Florite Baby Care Products", size: "Assorted" }],
+      company: t('catalog.companies.florite'),
+      category: t('catalog.categories.babyCare'),
+      description: t('catalog.products.floriteBaby.desc'),
+      products: [{ key: "floriteBaby", size: "Assorted" }],
       hasDownload: true,
     },
     {
-      company: "Wagh Bakri",
-      category: "Beverages",
-      description: "Premium tea for refreshing moments",
-      products: [{ name: "Wagh Bakri Tea Powder", size: "500gm" }],
+      company: t('catalog.companies.waghBakri'),
+      category: t('catalog.categories.beverages'),
+      description: t('catalog.products.waghBakri.desc'),
+      products: [{ key: "waghBakri", size: "500gm" }],
       hasDownload: true,
     },
     {
-      company: "Cipla",
-      category: "Cough & Cold Remedies",
-      description: "Effective relief for cold and sore throat",
-      products: [{ name: "Cofsils", size: "Strip" }],
+      company: t('catalog.companies.cipla'),
+      category: t('catalog.categories.cough'),
+      description: t('catalog.products.cofsils.desc'),
+      products: [{ key: "cofsils", size: "Strip" }],
       hasDownload: true,
     },
     {
-      company: "Mugi",
-      category: "Cleaning & Hygiene",
-      description: "Powerful cleaning solutions for home and kitchen",
+      company: t('catalog.companies.mugi'),
+      category: t('catalog.categories.cleaning'),
+      description: t('catalog.products.mugiLiquid.desc'),
       products: [
-        { name: "Mugi Liquid Detergent", size: "1lt" },
-        { name: "Mugi Dish Wash", size: "500ml" },
-        { name: "Mugi Detergent Soaps", size: "Pack" },
+        { key: "mugiLiquid", size: "1lt" },
+        { key: "mugiDish", size: "500ml" },
+        { key: "mugiSoaps", size: "Pack" },
       ],
       hasDownload: true,
     },
     {
-      company: "Gayatri",
-      category: "Spiritual Essentials",
-      description: "Essential products for spiritual rituals",
-      products: [{ name: "Gayatri Pooja Oil", size: "500ml" }],
+      company: t('catalog.companies.gayatri'),
+      category: t('catalog.categories.spiritualEssentials'),
+      description: t('catalog.products.gayatriOil.desc'),
+      products: [{ key: "gayatriOil", size: "500ml" }],
       hasDownload: true,
     },
     {
-      company: "Organic Farms",
-      category: "Natural Products",
-      description: "Pure, organic ingredients straight from nature",
+      company: t('catalog.companies.organicFarms'),
+      category: t('catalog.categories.natural'),
+      description: t('catalog.products.jaggery.desc'),
       products: [
-        { name: "Pure Organic Jaggery", size: "1kg" },
-        { name: "Pure Honey", size: "500ml" },
+        { key: "jaggery", size: "1kg" },
+        { key: "honey", size: "500ml" },
       ],
       hasDownload: true,
     },
     {
-      company: "Premium Nuts Co.",
-      category: "Dry Fruits & Snacks",
-      description: "High-quality nuts and healthy snacking options",
+      company: t('catalog.companies.premiumNuts'),
+      category: t('catalog.categories.dryFruits'),
+      description: t('catalog.products.cashew.desc'),
       products: [
-        { name: "No. 1 Good Quality Cashew", size: "500gm" },
-        { name: "Roasted Peanuts", size: "250gm" },
+        { key: "cashew", size: "500gm" },
+        { key: "peanuts", size: "250gm" },
       ],
       hasDownload: true,
     },
     {
-      company: "Abbott Nutrition",
-      category: "Baby Nutrition",
-      description: "Advanced nutritional supplements for infants and children",
+      company: t('catalog.companies.abbott'),
+      category: t('catalog.categories.babyNutrition'),
+      description: t('catalog.products.pediasure.desc'),
       products: [
-        { name: "Pediasure", size: "400gm" },
-        { name: "Ensure", size: "400gm" },
-        { name: "Similac", size: "400gm" },
-        { name: "Isomil", size: "400gm" },
+        { key: "pediasure", size: "400gm" },
+        { key: "ensure", size: "400gm" },
+        { key: "similac", size: "400gm" },
+        { key: "isomil", size: "400gm" },
       ],
       hasDownload: true,
     },
     {
-      company: "Huggies",
-      category: "Baby Diapers",
-      description: "Comfortable and absorbent diapers for babies",
-      products: [{ name: "Huggies Diapers", size: "Pack" }],
+      company: t('catalog.companies.huggies'),
+      category: t('catalog.categories.babyDiapers'),
+      description: t('catalog.products.huggies.desc'),
+      products: [{ key: "huggies", size: "Pack" }],
       hasDownload: true,
     },
     {
-      company: "Mars Inc.",
-      category: "Confectionery",
-      description: "Delicious chocolates loved by all ages",
-      products: [{ name: "Snickers Chocolates", size: "Bar" }],
+      company: t('catalog.companies.mars'),
+      category: t('catalog.categories.confectionery'),
+      description: t('catalog.products.snickers.desc'),
+      products: [{ key: "snickers", size: "Bar" }],
       hasDownload: true,
     },
   ];
@@ -172,11 +174,10 @@ const Catalog = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-business-blue mb-4">
-            Our Product Catalog
+            {t('catalog.title')}
           </h1>
           <p className="text-lg text-business-gray max-w-2xl mx-auto">
-            Explore our extensive range of products from trusted partner companies. 
-            Quality guaranteed, competitive prices, and local expertise you can trust.
+            {t('catalog.subtitle')}
           </p>
         </div>
 
@@ -207,7 +208,7 @@ const Catalog = () => {
                       <div className="flex flex-col items-start mb-3">
                         <div className="w-full flex justify-between items-center mb-1">
                           <h4 className="font-medium text-business-blue">
-                            {product.name}
+                            {t(`catalog.products.${product.key}.name`)}
                           </h4>
                           <span className="text-business-gray text-sm ml-4 whitespace-nowrap">{product.size}</span>
                         </div>
@@ -225,22 +226,21 @@ const Catalog = () => {
           <Card className="max-w-2xl mx-auto shadow-professional">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-business-blue mb-4">
-                Don't See What You're Looking For?
+                {t('catalog.ctaTitle')}
               </h3>
               <p className="text-business-gray mb-6">
-                We work with many partner companies and can source products beyond 
-                what's shown here. Contact us to discuss your specific needs.
+                {t('catalog.ctaDesc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="professional" size="lg" asChild>
                   <a href="tel:08819223582">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call Us: 08819 223582
+                    {t('catalog.callUs')}
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <a href="https://maps.app.goo.gl/ewxkqQ682Nnkv87z9" target="_blank" rel="noopener noreferrer">
-                    Request Custom Quote
+                    {t('catalog.requestQuote')}
                   </a>
                 </Button>
               </div>

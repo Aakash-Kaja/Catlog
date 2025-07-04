@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Users, Award, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-business.jpg";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -18,19 +20,19 @@ const Home = () => {
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="block text-business-orange mb-2">SRI RAMA ENTERPRISES</span>
-            <span className="text-3xl md:text-4xl font-semibold">Shop No 1, NSC BOSE ROAD, TANUKU</span>
+            <span className="block text-business-orange mb-2">{t('home.heroTitle')}</span>
+            <span className="text-3xl md:text-4xl font-semibold">{t('home.heroSubtitle')}</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto">
-            Your trusted local shop for quality products and personal service. Call us at 08819 223582 or +91 9985266299.
+            {t('home.heroDesc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="contact" size="lg" asChild>
-              <a href="tel:08819223582">Call Now</a>
+              <a href="tel:08819223582">{t('home.callNow')}</a>
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-business-blue">
-              <a href="https://maps.app.goo.gl/ewxkqQ682Nnkv87z9" target="_blank" rel="noopener noreferrer">Find Us</a>
+              <a href="https://maps.app.goo.gl/ewxkqQ682Nnkv87z9" target="_blank" rel="noopener noreferrer">{t('home.findUs')}</a>
             </Button>
           </div>
         </div>
@@ -41,10 +43,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-business-blue mb-4">
-              Why Choose SRI RAMA ENTERPRISES?
+              {t('home.aboutTitle')}
             </h2>
             <p className="text-lg text-business-gray max-w-2xl mx-auto">
-              We are your neighbors, committed to bringing you the best products with the personal service you deserve.
+              {t('home.aboutDesc')}
             </p>
           </div>
 
@@ -55,11 +57,10 @@ const Home = () => {
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-business-blue mb-4">
-                  Trusted Partnership
+                  {t('home.trusted')}
                 </h3>
                 <p className="text-business-gray">
-                  20+ years of reliable service to our community. We stand behind 
-                  every product and every promise we make.
+                  {t('home.trustedDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -70,11 +71,10 @@ const Home = () => {
                   <Award className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-business-blue mb-4">
-                  Quality Products
+                  {t('home.quality')}
                 </h3>
                 <p className="text-business-gray">
-                  We carefully select our partner companies to ensure you receive 
-                  only the highest quality products at competitive prices.
+                  {t('home.qualityDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -85,11 +85,10 @@ const Home = () => {
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-business-blue mb-4">
-                  Personal Service
+                  {t('home.personal')}
                 </h3>
                 <p className="text-business-gray">
-                  Local expertise with a personal touch. We know our customers 
-                  by name and their needs by heart.
+                  {t('home.personalDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -101,14 +100,14 @@ const Home = () => {
       <section className="py-20 bg-gradient-hero">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Visit SRI RAMA ENTERPRISES Today!
+            {t('home.ctaTitle')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Explore our range of products or contact us directly for your needs.
+            {t('home.ctaDesc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="contact" size="lg" asChild>
-              <a href="tel:08819223582">Call: 08819 223582</a>
+              <a href="tel:08819223582">{t('home.call')}</a>
             </Button>
             <Button 
               variant="outline" 
@@ -118,7 +117,7 @@ const Home = () => {
             >
               <a href="https://maps.app.goo.gl/ewxkqQ682Nnkv87z9" target="_blank" rel="noopener noreferrer">
                 <MapPin className="w-4 h-4 mr-2" />
-                Find Us on Google Maps
+                {t('home.findUsMaps')}
               </a>
             </Button>
           </div>
